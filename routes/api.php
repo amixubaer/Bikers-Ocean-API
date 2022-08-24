@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,8 @@ Route::delete('deleteproduct/{id}', [ProductController::class, 'deleteProduct'])
 Route::get('product/{id}', [ProductController::class, 'getProduct']);
 Route::put('updateproduct/{id}', [ProductController::class, 'updateProduct']);
 Route::get('search/{key}', [ProductController::class, 'search']);
+
+
+//others api
+Route::get('about', [AboutController::class, 'about']);
+Route::post('about/edit/{id}', [AboutController::class, 'edit']);
