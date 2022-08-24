@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,9 @@ Route::post('about/edit/{id}', [AboutController::class, 'edit']);
 //testimonial api
 Route::post('addtestimonial', [TestimonialController::class, 'addTestimonial']);
 Route::get('testimonial', [TestimonialController::class, 'testimonial']);
+
+//faq api
+Route::post('addfaq', [FaqController::class, 'addFaq']);
+Route::post('updatefaq/{id}', [FaqController::class, 'updateFaq']);
+Route::delete('deletefaq/{id}', [FaqController::class, 'deleteFaq']);
+Route::get('faq', [FaqController::class, 'faq']);
