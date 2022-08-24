@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +35,10 @@ Route::put('updateproduct/{id}', [ProductController::class, 'updateProduct']);
 Route::get('search/{key}', [ProductController::class, 'search']);
 
 
-//others api
+//about api
 Route::get('about', [AboutController::class, 'about']);
 Route::post('about/edit/{id}', [AboutController::class, 'edit']);
+
+//testimonial api
+Route::post('addtestimonial', [TestimonialController::class, 'addTestimonial']);
+Route::get('testimonial', [TestimonialController::class, 'testimonial']);
